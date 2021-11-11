@@ -59,10 +59,10 @@ jobs:
         name: libs
         path: dist/*
     - name: Publish
-        uses: actions/setup-node@v1
-        with:
-          node-version: 12
-          registry-url: https://registry.npmjs.org/
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12
+        registry-url: https://registry.npmjs.org/
       - run: yarn install
       - run: npm publish --access public
         env:
