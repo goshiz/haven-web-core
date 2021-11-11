@@ -59,11 +59,6 @@ jobs:
         name: libs
         path: dist/*
     - name: Publish
-      uses: actions/setup-node@v1
-      with:
-        node-version: 10
-      - run: npm install
-      - run: npm test
-      - uses: JS-DevTools/npm-publish@v1
+      uses: JS-DevTools/npm-publish@v1
         with:
           token: ${{ secrets.NPM_TOKEN }}
